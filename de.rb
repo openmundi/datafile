@@ -1,17 +1,11 @@
 
 ###
-# todo/fix:
-#  add country "dataset" for quickfix e.g. lets us setup austria country e.g.
-# create!
-#   key: 'de',
-#   name: 'Germany',
-#   code: 'GER',
-#   pop: 0,
-#   area: 0
-#
-# or use inline do
-#      Country.create!     ???
-#  end
+## setup germany if not present
+##  -- move to germany.db  e.g. /countries.txt - why? why not??
+inline do
+   WorldDb::Model::Country.parse( 'de', 'Germany', 'GER', '357_050 km²', '81_799_600' )
+end
+
 
 world 'openmundi/deutschland.db'   # note: default setup is all
 
